@@ -1,0 +1,37 @@
+QUICK BUILD INSTRUCTIONS
+========================
+
+The plugin requires Paper API to compile. Here are your options:
+
+OPTION 1: Use Docker (Easiest)
+=============================
+If you have Docker installed, run:
+  docker run -v "%cd%":/workspace -w /workspace maven:3.9-eclipse-temurin-21 mvn clean package
+
+OPTION 2: Download Maven
+=========================
+1. Download Maven 3.9.6: https://maven.apache.org/download.cgi
+2. Extract to C:\maven
+3. Add C:\maven\bin to your PATH environment variable
+4. Restart PowerShell and run:
+   mvn clean package
+
+OPTION 3: Use IntelliJ IDEA (If you have it)
+==============================================
+1. Open this project in IntelliJ
+2. Right-click pom.xml → Run Maven → package
+3. JAR will be in target/ folder
+
+OPTION 4: Use GitHub Actions (Skip local build)
+================================================
+1. Push to GitHub (already done)
+2. Create .github/workflows/maven.yml with build workflow
+3. JAR builds automatically and can be downloaded
+
+AFTER BUILD
+===========
+Copy target/seasonal-bundle-1.0.0.jar to your Paper server plugins folder.
+
+For Paper server download: https://papermc.io/
+
+Need help? The plugin code is ready, just need to compile it with Maven.
