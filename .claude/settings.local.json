@@ -4,7 +4,17 @@
       "Bash(mvn clean package:*)",
       "Bash(java:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Bash(git log:*)",
+      "Bash(javac:*)",
+      "Bash(src/main/java/com/gtmc/seasonalbundle/SeasonalBundlePlugin.java )",
+      "Bash(src/main/java/com/gtmc/seasonalbundle/data/SeasonDataManager.java )",
+      "Bash(src/main/java/com/gtmc/seasonalbundle/util/BundleUtil.java )",
+      "Bash(src/main/java/com/gtmc/seasonalbundle/listeners/PlayerJoinListener.java )",
+      "Bash(src/main/java/com/gtmc/seasonalbundle/listeners/ItemValidationListener.java )",
+      "Bash(src/main/java/com/gtmc/seasonalbundle/commands/SeasonCommand.java)",
+      "Bash(curl:*)"
     ],
     "deny": [],
     "ask": []

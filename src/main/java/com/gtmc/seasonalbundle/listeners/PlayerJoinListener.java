@@ -23,6 +23,12 @@ public class PlayerJoinListener implements Listener {
     public void onPlayerJoin(PlayerJoinEvent event) {
         Player player = event.getPlayer();
 
+        // Check if player already has a seasonal bundle
+        if (hasSeasonalBundle(player)) {
+            player.sendMessage("§6§lWelcome back to Season " + dataManager.getCurrentSeason() + "!");
+            return;
+        }
+
         // Check if player has a seasonal item from previous season
         ItemStack seasonalItem = dataManager.getPlayerItem(player.getUniqueId());
 
@@ -52,7 +58,24 @@ public class PlayerJoinListener implements Listener {
 
             player.sendMessage("§6§lWelcome to Season " + dataManager.getCurrentSeason() + "!");
             player.sendMessage("§7You have received a §6Seasonal Bundle§7!");
-            player.sendMessage("§8Store one item in it for the next season!");
+            player.sendMessage("§8Store ONE item in it for the next season!");
         }
+    }
+
+    /**
+     * Check if player already has a seasonal bundle
+     */
+    private boolean hasSeasonalBundle(Player player) {
+        for (ItemStack item : player.getInventory().getContents()) {
+            if (item != null && item.getType().name().equals("BUNDLE")) {
+                if (item.hasItemMeta() && item.getItemMeta().getDisplayName() != null) {
+                    String displayName = item.getItemMeta().getDisplayName();
+                    if (displayName.contains("Seasonal Bundle") || displayName.contains("RELIC")) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
     }
 }

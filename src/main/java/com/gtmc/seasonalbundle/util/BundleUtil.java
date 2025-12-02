@@ -78,20 +78,27 @@ public class BundleUtil {
 
     /**
      * Validates if an item can be placed in a bundle
+     * Only allows 1 item, rejects: elytras, shulker boxes, bundles
      */
     public static boolean isValidBundleItem(Material material) {
+        if (material == null) {
+            return false;
+        }
+
+        String materialName = material.name();
+
         // Reject elytras
         if (material == Material.ELYTRA) {
             return false;
         }
 
-        // Reject shulker boxes
-        if (material.name().endsWith("_SHULKER_BOX")) {
+        // Reject bundles (prevent nesting)
+        if (material == Material.BUNDLE) {
             return false;
         }
 
-        // Reject the bundle itself
-        if (material == Material.BUNDLE) {
+        // Reject ALL shulker boxes (including all color variants)
+        if (materialName.contains("SHULKER_BOX")) {
             return false;
         }
 
