@@ -1,0 +1,47 @@
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+.flattened-pom.xml
+
+# Gradle
+build/
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+!gradle-wrapper.properties
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.classpath
+.project
+.settings/
+*.iml
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Plugin Runtime
+plugins/
+logs/
+world/
+server.properties
+
+# Build outputs
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+dist/
+out/
+
+# Local development
+.env
+local.properties
