@@ -1,0 +1,17 @@
+name: SeasonalBundle
+version: 1.0.0
+description: Seasonal item bundle plugin for Paper 1.21.10
+author: GTMC Team
+main: com.gtmc.seasonalbundle.SeasonalBundlePlugin
+api-version: 1.21
+
+commands:
+  seasonend:
+    description: End current season and save items
+    usage: /seasonend
+  seasonstart:
+    description: Start new season with saved items
+    usage: /seasonstart
+  bundlereload:
+    description: Reload plugin configuration
+    usage: /bundlereload

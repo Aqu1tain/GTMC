@@ -1,0 +1,44 @@
+# SeasonalBundle Plugin Configuration
+# For Minecraft 1.21.10 Paper Server
+
+# Current season number
+# This will be automatically updated when seasons start/end
+current-season: 1
+
+# Bundle Configuration
+bundle:
+  # Maximum slots in a bundle (currently locked to 1)
+  max-slots: 1
+
+  # Items that are NOT allowed in bundles
+  blacklist:
+    - ELYTRA
+    - SHULKER_BOX
+    - WHITE_SHULKER_BOX
+    - ORANGE_SHULKER_BOX
+    - MAGENTA_SHULKER_BOX
+    - LIGHT_BLUE_SHULKER_BOX
+    - YELLOW_SHULKER_BOX
+    - LIME_SHULKER_BOX
+    - PINK_SHULKER_BOX
+    - GRAY_SHULKER_BOX
+    - LIGHT_GRAY_SHULKER_BOX
+    - CYAN_SHULKER_BOX
+    - PURPLE_SHULKER_BOX
+    - BLUE_SHULKER_BOX
+    - BROWN_SHULKER_BOX
+    - GREEN_SHULKER_BOX
+    - RED_SHULKER_BOX
+    - BLACK_SHULKER_BOX
+    - BUNDLE
+
+# Messages
+messages:
+  season-start: "§6§lSeason {season} has begun!"
+  season-end: "§6§lSeason {season} has ended!"
+  bundle-given: "§7You have received a §6Seasonal Bundle§7!"
+  bundle-instructions: "§8Store one item in it for the next season!"
+  relic-received: "§7You have received your §c§lSEASON {old-season} RELIC§7!"
+  bundle-full: "§cThis bundle is at maximum capacity!"
+  invalid-item: "§cYou cannot put this item in a bundle!"
+  stack-too-large: "§cBundles can only hold 1 item!"

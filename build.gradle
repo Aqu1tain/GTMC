@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+}
+
+group = 'com.gtmc'
+version = '1.0.0'
+description = 'Seasonal item bundle plugin for Paper 1.21.10'
+
+repositories {
+    mavenCentral()
+    maven {
+        url = uri('https://repo.papermc.io/repository/maven-public/')
+    }
+}
+
+dependencies {
+    compileOnly 'io.papermc.paper:paper-api:1.21.1-R0.1-SNAPSHOT'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
+}
+
+tasks.named('jar') {
+    from('src/main/resources') {
+        include 'plugin.yml'
+        include 'config.yml'
+    }
+}
