@@ -72,8 +72,8 @@ public class SeasonCommand implements CommandExecutor, TabCompleter {
         }
 
         dataManager.endSeason();
-        sender.sendMessage("§aSeasonEndSeason " + dataManager.getCurrentSeason() + " ended successfully!");
-        Bukkit.broadcastMessage("§6§lSeason " + dataManager.getCurrentSeason() + " has ended!");
+        sender.sendMessage("§aSeason " + (dataManager.getCurrentSeason() - 1) + " ended successfully!");
+        Bukkit.broadcastMessage("§6§lSeason " + (dataManager.getCurrentSeason() - 1) + " has ended!");
 
         return true;
     }
